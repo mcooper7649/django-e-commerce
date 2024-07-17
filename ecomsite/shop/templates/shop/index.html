@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,6 +16,7 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="{% static 'shop/style.css' %}" />
   </head>
   <body>
     <div class="container">
@@ -25,7 +27,7 @@
             <img src="{{ product.image }}" class="card-img-top" alt="" />
             <div class="card-body">
               <div class="card-title">{{ product.title }}</div>
-              <div class="card-text">{{ product.price }}</div>
+              <div class="card-text">${{ product.price }}</div>
             </div>
           </div>
         </div>
