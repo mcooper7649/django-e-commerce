@@ -1,10 +1,10 @@
 from django.shortcuts import render
-from .models import Products,Order
+from .models import Product,Order
 from django.core.paginator import Paginator
 # Create your views here.
  
 def index(request):
-    product_objects = Products.objects.all()
+    product_objects = Product.objects.all()
  
     #search code
     item_name = request.GET.get('item_name')
@@ -20,7 +20,7 @@ def index(request):
  
  
 def detail(request,id):
-    product_object = Products.objects.get(id=id)
+    product_object = Product.objects.get(id=id)
     return render(request,'shop/detail.html',{'product_object':product_object})
     
 def checkout(request):
