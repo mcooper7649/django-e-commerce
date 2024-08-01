@@ -15,5 +15,7 @@ class ProductAdmin(admin.ModelAdmin):
     list_display = ('title', 'price',  'category', 'discountPrice', 'description')
     search_fields = ('title',)
     actions=('change_category_to_default',)
+    fields =('title', 'price',)
+    list_editable=('price', 'category',)
 admin.site.register(Product,ProductAdmin)
 admin.site.register(Order)
