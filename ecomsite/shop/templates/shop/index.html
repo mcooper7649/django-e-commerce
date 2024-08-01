@@ -164,7 +164,7 @@
           price = parseFloat(
             document.getElementById("price" + item_id).innerHTML
           );
-          name = document.getElementById("nm" + item_id).innerHTML;
+          name = document.getElementById("nm" + item_id).innerText;
           cart[item_id] = [quantity, name, price];
         }
         console.log(cart);
